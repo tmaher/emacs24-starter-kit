@@ -54,6 +54,8 @@
                     '("\\.txt$" . text-mode)
                     '("\\.+rc$" . shell-script-mode)
                     '("\\.as$" . actionscript-mode)
+                    '("\\.gemspec$" . ruby-mode)
+                    '("Gemfile$" . ruby-mode)
                     ) auto-mode-alist)
       )
 
@@ -89,16 +91,18 @@
        mode-line-end-spaces
        ))
 
+(custom-set-variables
+ '(nxhtml-skip-welcome t)
+ '(query-user-mail-address nil)
+ '(toolbar-visible-p nil)
+ '(user-mail-address "Tom Maher <tmaher@pw0n.me>")
+ )
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(load-home-init-file t t)
- '(nxhtml-skip-welcome t)
- '(query-user-mail-address nil)
- '(toolbar-visible-p nil)
- '(user-mail-address "Tom Maher <tmaher@pw0n.me>")
 
  '(font-lock-comment-delimiter-face ((default (:inherit font-lock-comment-face)) (((class color) (min-colors 8) (background dark)) nil)))
  '(font-lock-comment-face ((nil (:foreground "red"))))
