@@ -74,8 +74,9 @@
 (setq warning-minimum-log-level :error)
 
 (server-start)
-(add-hook' term-setup-hook (lambda () (tmaher-init-keybind)))
-(add-hook' term-setup-hook (lambda ()  (message "What is thy bidding, my master?")))
+(add-hook 'term-setup-hook 'tmaher-init-keybind)
+(add-hook 'term-setup-hook (lambda () 
+                             (message "What is thy bidding, my master?")))
 
 (setq-default
  mode-line-format
@@ -83,7 +84,7 @@
        mode-line-position
        mode-line-modified
        mode-line-mule-info
-       mode-line-remote
+       ;; mode-line-remote
        "|"
        mode-line-buffer-identification
        " %n "
