@@ -4,13 +4,14 @@
  delete-key-deletes-forward nil
  minibuffer-max-depth nil
  fill-column 72
- tab-width 8
+ tab-width 4
  require-final-newline t
  warning-suppress-types nil
  )
 
 (setq-default
  indent-tabs-mode nil
+ tab-width 4
  sh-indentation 2
  )
 
@@ -66,6 +67,7 @@
 
 (add-hook 'java-mode-hook (lambda () (setq c-basic-offset 2
                                       indent-tabs-mode nil)))
+(add-hook 'go-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
 ;; shut up shut up SHUT UP
 (setq warning-minimum-level :error)
